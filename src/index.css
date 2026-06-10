@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg:           #0D0B08;
+  --bg-card:      #141209;
+  --bg-elevated:  #1C1810;
+  --gold:         #C9A84C;
+  --gold-light:   #E8C96A;
+  --gold-dim:     rgba(201, 168, 76, 0.18);
+  --gold-border:  rgba(201, 168, 76, 0.35);
+  --cream:        #F2EDE6;
+  --cream-muted:  #A89F92;
+  --border:       rgba(201, 168, 76, 0.15);
+
+  --display: 'Playfair Display', Georgia, serif;
+  --body:    'Inter', system-ui, sans-serif;
+
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--cream-muted);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  color-scheme: dark;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--display);
+  color: var(--cream);
+  margin: 0;
+  line-height: 1.15;
+}
+
+p { margin: 0; }
+a { text-decoration: none; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--gold-border); border-radius: 3px; }
+
+/* Ornament divider */
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--gold);
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+.ornament::before,
+.ornament::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-border), transparent);
+}
